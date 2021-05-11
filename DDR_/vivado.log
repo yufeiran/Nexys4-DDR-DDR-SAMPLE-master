@@ -2,39 +2,130 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue May 11 14:24:49 2021
-# Process ID: 7640
+# Start of session at: Tue May 11 19:42:13 2021
+# Process ID: 13272
 # Current directory: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6852 C:\Users\Administrator\Desktop\Nexys4-DDR-DDR-SAMPLE-master\DDR_\DDR_.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6656 C:\Users\Administrator\Desktop\Nexys4-DDR-DDR-SAMPLE-master\DDR_\DDR_.xpr
 # Log file: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/vivado.log
 # Journal file: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.xpr
-INFO: [Project 1-313] Project file moved from 'D:/codehub/VIVADO/DDR_' since last save.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/Nexys-4-DDR-Music-Looper/src/constraints/Nexys4DDR_Master.xdc', nor could it be found using path 'D:/codehub/VIVADO/Nexys-4-DDR-Music-Looper/src/constraints/Nexys4DDR_Master.xdc'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 746.180 ; gain = 83.504
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 764.102 ; gain = 121.449
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/Nexys-4-DDR-Music-Looper/src/constraints/Nexys4DDR_Master.xdc] -no_script -reset -force -quiet
-remove_files  -fileset constrs_1 C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/Nexys-4-DDR-Music-Looper/src/constraints/Nexys4DDR_Master.xdc
-add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mig_7series_0'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'mig_7series_0'...
+launch_runs synth_1 -jobs 4
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
-[Tue May 11 15:16:35 2021] Launched mig_7series_0_synth_1, synth_1...
-Run output will be captured here:
-mig_7series_0_synth_1: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/mig_7series_0_synth_1/runme.log
-synth_1: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/runme.log
-[Tue May 11 15:16:35 2021] Launched impl_1...
+[Tue May 11 19:42:49 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0.dcp' for cell 'Ram/Inst_DDR'
+INFO: [Netlist 29-17] Analyzing 284 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_1/inst/clkin1_ibufg, from the path connected to top-level port: CLK100MHZ 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_1/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_1/inst'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_1/inst'
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1766.906 ; gain = 577.055
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_1/inst'
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'Ram/Inst_DDR'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'Ram/Inst_DDR'
+Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1774.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 123 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 104 instances
+
+open_run: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1790.789 ; gain = 779.352
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+[Tue May 11 19:45:22 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0.dcp' for cell 'Ram/Inst_DDR'
+INFO: [Netlist 29-17] Analyzing 284 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_1/inst'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_1/inst'
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_1/inst'
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'Ram/Inst_DDR'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'Ram/Inst_DDR'
+Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1876.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 123 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 104 instances
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1876.539 ; gain = 71.457
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list clk_1/inst/clk_out1 ]]
+set_property port_width 5 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {mem_controller/pstate[0]} {mem_controller/pstate[1]} {mem_controller/pstate[2]} {mem_controller/pstate[3]} {mem_controller/pstate[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list p_r ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list r_r ]]
+set_property target_constrs_file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1877.492 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1878.465 ; gain = 0.973
+[Tue May 11 19:46:53 2021] Launched impl_1...
 Run output will be captured here: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1126.703 ; gain = 295.160
 open_hw
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -48,37 +139,89 @@ INFO: [Labtools 27-2221] Launch Output:
 
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292709934A
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2972.410 ; gain = 1091.004
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'bX_XXXX [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'b0_0001 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-May-11 19:56:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-May-11 19:56:23
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-May-11 19:56:58
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-May-11 19:57:00
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292709934A
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292709934A
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292709934A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292709934A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292709934A
 INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
-[Tue May 11 15:26:51 2021] Launched synth_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/runme.log
-[Tue May 11 15:26:51 2021] Launched impl_1...
-Run output will be captured here: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue May 11 15:31:09 2021...
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-May-11 20:03:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-May-11 20:03:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq5'hXX [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-May-11 20:04:22
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-May-11 20:04:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE neq5'hXX [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq5'h00 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-May-11 20:04:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-May-11 20:04:40
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq5'h00 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'h01 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-May-11 20:09:01
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-May-11 20:09:05
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.

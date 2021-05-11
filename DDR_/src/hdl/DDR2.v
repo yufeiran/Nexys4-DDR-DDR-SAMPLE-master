@@ -88,6 +88,8 @@ module DDR2(
     wire reset_max;
     wire p;//Bank is playing
     wire r;//Bank is recording
+    (* Mark_debug = "TRUE" *)reg p_r;
+    (* Mark_debug = "TRUE" *)reg r_r;
     wire del_mem;//Clear delete flag
     wire delete;//Delete flag
     wire [2:0] delete_bank;//Bank to delete
@@ -101,7 +103,7 @@ module DDR2(
     
     wire [26:0] mem_a;   //????????งางๅ???
     assign mem_a[26] = 1'b0;  
-    assign mem_a [25:0] = 26'd666; //Address is block*8 + banknumber
+    assign mem_a [25:0] = 26'd1024; //Address is block*8 + banknumber
     //So address cycles through 0 - 1 - 2 - 3 - 4 - 5 - 6 - 7, then current block is inremented by 1 and mem_bank goes back to 0: mem_a = 8
     wire [31:0] mem_dq_i;
     wire [31:0] mem_dq_o;
@@ -111,8 +113,10 @@ module DDR2(
     wire mem_wen;
     wire mem_ub;
     wire mem_lb;
+    wire [3:0]mem_sel;
     assign mem_ub = 0;
     assign mem_lb = 0;
+    assign mem_sel= 4'd0;
     
     wire [15:0] chipTemp;
 
@@ -138,8 +142,10 @@ module DDR2(
     );     
     assign p=BTNL;
     assign r=BTNR;
-        
-    
+    always@(posedge(clk_out_100MHZ))begin
+        p_r<=p;
+        r_r<=r;
+    end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////    Memory instantiation
 //////////////////////////////////////////////////////////////////////////////////////////////////////// 
@@ -158,6 +164,7 @@ module DDR2(
         .ram_wen               (mem_wen),
         .ram_ub                (mem_ub),
         .ram_lb                (mem_lb),
+        .ram_sel               (mem_sel),
         // DDR2 interface
         .ddr2_addr             (ddr2_addr),
         .ddr2_ba               (ddr2_ba),

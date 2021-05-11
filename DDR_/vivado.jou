@@ -2,43 +2,95 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue May 11 14:24:49 2021
-# Process ID: 7640
+# Start of session at: Tue May 11 19:42:13 2021
+# Process ID: 13272
 # Current directory: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6852 C:\Users\Administrator\Desktop\Nexys4-DDR-DDR-SAMPLE-master\DDR_\DDR_.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6656 C:\Users\Administrator\Desktop\Nexys4-DDR-DDR-SAMPLE-master\DDR_\DDR_.xpr
 # Log file: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/vivado.log
 # Journal file: C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.xpr
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/Nexys-4-DDR-Music-Looper/src/constraints/Nexys4DDR_Master.xdc] -no_script -reset -force -quiet
-remove_files  -fileset constrs_1 C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/Nexys-4-DDR-Music-Looper/src/constraints/Nexys4DDR_Master.xdc
-add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc
 reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list clk_1/inst/clk_out1 ]]
+set_property port_width 5 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {mem_controller/pstate[0]} {mem_controller/pstate[1]} {mem_controller/pstate[2]} {mem_controller/pstate[3]} {mem_controller/pstate[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list p_r ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list r_r ]]
+set_property target_constrs_file C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc [current_fileset -constrset]
+save_constraints -force
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'bX_XXXX [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'b0_0001 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/DDR2.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/impl_1/looper1_1.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'hXX [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq5'hXX [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq5'h00 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'h00 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq5'h01 [get_hw_probes mem_controller/pstate -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]

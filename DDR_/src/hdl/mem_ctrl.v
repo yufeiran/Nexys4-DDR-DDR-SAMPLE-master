@@ -69,7 +69,7 @@ module mem_ctrl(
     assign address_enable = playing || recording;
     reg [12:0] count=0;
     
-    reg [4:0]pstate = WAIT;
+    (* Mark_debug = "TRUE" *) reg [4:0]pstate = WAIT;
     reg [3:0] nstate = BANK;
     reg delay_done = 0;
     reg counterEnable=0;

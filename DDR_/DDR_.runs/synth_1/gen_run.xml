@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1620718010">
-  <File Type="PA-TCL" Name="looper1_1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="looper1_1_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="looper1_1_reports.tcl"/>
-  <File Type="RDS-RDS" Name="looper1_1.vds"/>
-  <File Type="RDS-UTIL" Name="looper1_1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="looper1_1_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="looper1_1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="looper1_1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="looper1_1_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1620733611">
+  <File Type="PA-TCL" Name="DDR2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DDR2_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="DDR2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="DDR2.vds"/>
+  <File Type="RDS-UTIL" Name="DDR2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="DDR2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="DDR2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DDR2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DDR2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/src/ip/clk_wiz_0/clk_wiz_0.xci">
@@ -31,7 +31,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/src/hdl/looper1_1.v">
+    <File Path="$PPRDIR/src/hdl/DDR2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -46,7 +46,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="looper1_1"/>
+      <Option Name="TopModule" Val="DDR2"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -59,6 +59,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/src/constraints/Nexys4DDR_Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log looper1_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source looper1_1.tcl
+EAStep vivado -log DDR2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DDR2.tcl

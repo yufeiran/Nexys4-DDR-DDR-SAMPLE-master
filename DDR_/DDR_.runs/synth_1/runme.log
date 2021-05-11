@@ -1,0 +1,646 @@
+
+*** Running vivado
+    with args -log looper1_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source looper1_1.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source looper1_1.tcl -notrace
+Command: synth_design -top looper1_1 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4824 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 765.582 ; gain = 177.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'looper1_1' [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:25]
+	Parameter tenhz bound to: 10000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/.Xil/Vivado-5604-DESKTOP-MI6UCPP/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/.Xil/Vivado-5604-DESKTOP-MI6UCPP/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'Ram2Ddr' [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:62]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "GRAY" *) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:131]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:138]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/.Xil/Vivado-5604-DESKTOP-MI6UCPP/realtime/mig_7series_0_stub.v:5' bound to instance 'Inst_DDR' of component 'mig_7series_0' [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:193]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/.Xil/Vivado-5604-DESKTOP-MI6UCPP/realtime/mig_7series_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (2#1) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/.Xil/Vivado-5604-DESKTOP-MI6UCPP/realtime/mig_7series_0_stub.v:5]
+WARNING: [Synth 8-6014] Unused sequential element ram_ub_int_reg was removed.  [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:247]
+WARNING: [Synth 8-6014] Unused sequential element ram_lb_int_reg was removed.  [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:248]
+INFO: [Synth 8-256] done synthesizing module 'Ram2Ddr' (3#1) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/Ram2Ddr.vhd:62]
+WARNING: [Synth 8-7023] instance 'Ram' of module 'Ram2Ddr' has 26 connections declared, but only 25 given [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:148]
+INFO: [Synth 8-6157] synthesizing module 'mem_ctrl' [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/mem_ctrl.v:23]
+	Parameter BANK bound to: 4'b0000 
+	Parameter FLAG bound to: 4'b0010 
+	Parameter BANK_ACK bound to: 4'b0001 
+	Parameter INC_BLOCK bound to: 4'b0011 
+	Parameter WAIT bound to: 4'b0111 
+	Parameter DELETE bound to: 4'b0100 
+	Parameter DELETE_ACK bound to: 4'b0101 
+	Parameter DELETE_INC bound to: 4'b0110 
+	Parameter ONECYCLE bound to: 4'b1000 
+	Parameter ENTERDELETE bound to: 4'b1010 
+	Parameter LEAVEDELETE bound to: 4'b1001 
+	Parameter MHz44cnt bound to: 2268 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/mem_ctrl.v:115]
+WARNING: [Synth 8-6014] Unused sequential element increment_reg was removed.  [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/mem_ctrl.v:166]
+INFO: [Synth 8-6155] done synthesizing module 'mem_ctrl' (4#1) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/mem_ctrl.v:23]
+WARNING: [Synth 8-3848] Net AUD_PWM in module/entity looper1_1 does not have driver. [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:45]
+WARNING: [Synth 8-3848] Net AUD_SD in module/entity looper1_1 does not have driver. [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:46]
+WARNING: [Synth 8-3848] Net an in module/entity looper1_1 does not have driver. [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:48]
+WARNING: [Synth 8-3848] Net seg in module/entity looper1_1 does not have driver. [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:49]
+WARNING: [Synth 8-3848] Net chipTemp in module/entity looper1_1 does not have driver. [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'looper1_1' (5#1) [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/hdl/looper1_1.v:25]
+WARNING: [Synth 8-3331] design Ram2Ddr has unconnected port ram_ub
+WARNING: [Synth 8-3331] design Ram2Ddr has unconnected port ram_lb
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port AUD_PWM
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port AUD_SD
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[7]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[6]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[5]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[4]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[3]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[2]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[1]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[0]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[6]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[5]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[4]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[3]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[2]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[1]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[0]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port vauxp3
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port vauxn3
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port BTND
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port BTNC
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port JC1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 828.902 ; gain = 240.562
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 828.902 ; gain = 240.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 828.902 ; gain = 240.562
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_1'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_1'
+Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'Ram/Inst_DDR'
+Finished Parsing XDC File [c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'Ram/Inst_DDR'
+Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/constraints/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/looper1_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/looper1_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 961.180 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 961.180 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[11]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[11]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[12]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[12]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[2]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[2]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[3]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[3]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[4]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[4]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[5]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[5]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[6]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[6]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[7]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[7]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[8]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[8]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[9]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[9]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[2]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[2]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cas_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cas_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ck_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_p. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ck_p. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cke. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cke. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cs_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cs_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dm[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dm[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dm[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dm[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[10]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[10]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[11]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[11]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[12]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[12]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[13]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[13]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[14]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[14]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[15]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[15]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[2]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[2]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[3]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[3]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[4]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[4]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[5]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[5]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[6]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[6]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[7]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[7]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[8]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[8]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[9]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[9]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_n[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_n[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_n[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_n[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_p[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_p[0]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_p[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_p[1]. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_odt. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_odt. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ras_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ras_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  c:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/src/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 93).
+Applied set_property DONT_TOUCH = true for clk_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Ram/Inst_DDR. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cState_reg' in module 'Ram2Ddr'
+INFO: [Synth 8-5546] ROM "get_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mix_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delete_address" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                           000001 |                              000
+                stpreset |                           000010 |                              001
+              stsenddata |                           000100 |                              010
+              stsetcmdwr |                           001000 |                              100
+              stsetcmdrd |                           010000 |                              011
+               stwaitcen |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cState_reg' using encoding 'one-hot' in module 'Ram2Ddr'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               27 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 28    
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module looper1_1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Ram2Ddr 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               27 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module mem_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 26    
+	  12 Input      1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port AUD_PWM
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port AUD_SD
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[7]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[6]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[5]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[4]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[3]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[2]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[1]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port an[0]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[6]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[5]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[4]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[3]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[2]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[1]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port seg[0]
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port vauxp3
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port vauxn3
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port BTND
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port BTNC
+WARNING: [Synth 8-3331] design looper1_1 has unconnected port JC1
+INFO: [Synth 8-3886] merging instance 'InData_reg[8]' (FDE) to 'InData_reg[9]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[9]' (FDE) to 'InData_reg[10]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[10]' (FDE) to 'InData_reg[11]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[11]' (FDE) to 'InData_reg[12]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[12]' (FDE) to 'InData_reg[13]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[13]' (FDE) to 'InData_reg[14]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[14]' (FDE) to 'InData_reg[15]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[15]' (FDE) to 'InData_reg[16]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[16]' (FDE) to 'InData_reg[17]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[17]' (FDE) to 'InData_reg[18]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[18]' (FDE) to 'InData_reg[19]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[19]' (FDE) to 'InData_reg[20]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[20]' (FDE) to 'InData_reg[21]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[21]' (FDE) to 'InData_reg[22]'
+INFO: [Synth 8-3886] merging instance 'InData_reg[22]' (FDE) to 'InData_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\InData_reg[23] )
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[0]' (FDE) to 'mem_controller/max_delete_block_reg[1]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[1]' (FDE) to 'mem_controller/max_delete_block_reg[2]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[2]' (FDE) to 'mem_controller/max_delete_block_reg[3]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[3]' (FDE) to 'mem_controller/max_delete_block_reg[4]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[4]' (FDE) to 'mem_controller/max_delete_block_reg[5]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[5]' (FDE) to 'mem_controller/max_delete_block_reg[6]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[6]' (FDE) to 'mem_controller/max_delete_block_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[7]' (FDE) to 'mem_controller/max_delete_block_reg[8]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[8]' (FDE) to 'mem_controller/max_delete_block_reg[9]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[9]' (FDE) to 'mem_controller/max_delete_block_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[10]' (FDE) to 'mem_controller/max_delete_block_reg[11]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[11]' (FDE) to 'mem_controller/max_delete_block_reg[12]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[12]' (FDE) to 'mem_controller/max_delete_block_reg[13]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[13]' (FDE) to 'mem_controller/max_delete_block_reg[14]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[14]' (FDE) to 'mem_controller/max_delete_block_reg[15]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[15]' (FDE) to 'mem_controller/max_delete_block_reg[16]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[16]' (FDE) to 'mem_controller/max_delete_block_reg[17]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[17]' (FDE) to 'mem_controller/max_delete_block_reg[18]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[18]' (FDE) to 'mem_controller/max_delete_block_reg[19]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[19]' (FDE) to 'mem_controller/max_delete_block_reg[20]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[20]' (FDE) to 'mem_controller/max_delete_block_reg[21]'
+INFO: [Synth 8-3886] merging instance 'mem_controller/max_delete_block_reg[21]' (FDE) to 'mem_controller/max_delete_block_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_controller/max_delete_block_reg[22] )
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[3]' (FD) to 'Ram/ram_a_int_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[4]' (FD) to 'Ram/ram_a_int_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[5]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[6]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[7]' (FD) to 'Ram/ram_a_int_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[8]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[9]' (FD) to 'Ram/ram_a_int_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[10]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[11]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[12]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[13]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[14]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[15]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[16]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[17]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[18]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[19]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[20]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[21]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[22]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[23]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[24]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[25]' (FD) to 'Ram/ram_a_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[26]' (FD) to 'Ram/ram_a_int_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Ram/ram_a_int_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Ram/ram_a_int_reg[2]' (FD) to 'Ram/ram_a_int_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Ram/ram_a_int_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mem_controller/pstate_reg[4] )
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[0]' (FDE) to 'Ram/mem_wdf_data_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[1]' (FDE) to 'Ram/mem_wdf_data_reg[33]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[2]' (FDE) to 'Ram/mem_wdf_data_reg[34]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[3]' (FDE) to 'Ram/mem_wdf_data_reg[35]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[4]' (FDE) to 'Ram/mem_wdf_data_reg[36]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[5]' (FDE) to 'Ram/mem_wdf_data_reg[37]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[6]' (FDE) to 'Ram/mem_wdf_data_reg[38]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[7]' (FDE) to 'Ram/mem_wdf_data_reg[39]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[8]' (FDE) to 'Ram/mem_wdf_data_reg[40]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[9]' (FDE) to 'Ram/mem_wdf_data_reg[41]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[10]' (FDE) to 'Ram/mem_wdf_data_reg[42]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[11]' (FDE) to 'Ram/mem_wdf_data_reg[43]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[12]' (FDE) to 'Ram/mem_wdf_data_reg[44]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[13]' (FDE) to 'Ram/mem_wdf_data_reg[45]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[14]' (FDE) to 'Ram/mem_wdf_data_reg[46]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[15]' (FDE) to 'Ram/mem_wdf_data_reg[47]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[16]' (FDE) to 'Ram/mem_wdf_data_reg[48]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[17]' (FDE) to 'Ram/mem_wdf_data_reg[49]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[18]' (FDE) to 'Ram/mem_wdf_data_reg[50]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[19]' (FDE) to 'Ram/mem_wdf_data_reg[51]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[20]' (FDE) to 'Ram/mem_wdf_data_reg[52]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[21]' (FDE) to 'Ram/mem_wdf_data_reg[53]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[22]' (FDE) to 'Ram/mem_wdf_data_reg[54]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[23]' (FDE) to 'Ram/mem_wdf_data_reg[55]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[24]' (FDE) to 'Ram/mem_wdf_data_reg[56]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[25]' (FDE) to 'Ram/mem_wdf_data_reg[57]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[26]' (FDE) to 'Ram/mem_wdf_data_reg[58]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[27]' (FDE) to 'Ram/mem_wdf_data_reg[59]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[28]' (FDE) to 'Ram/mem_wdf_data_reg[60]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[29]' (FDE) to 'Ram/mem_wdf_data_reg[61]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[30]' (FDE) to 'Ram/mem_wdf_data_reg[62]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[31]' (FDE) to 'Ram/mem_wdf_data_reg[63]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[32]' (FDE) to 'Ram/mem_wdf_data_reg[64]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[33]' (FDE) to 'Ram/mem_wdf_data_reg[65]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[34]' (FDE) to 'Ram/mem_wdf_data_reg[66]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[35]' (FDE) to 'Ram/mem_wdf_data_reg[67]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[36]' (FDE) to 'Ram/mem_wdf_data_reg[68]'
+INFO: [Synth 8-3886] merging instance 'Ram/mem_wdf_data_reg[37]' (FDE) to 'Ram/mem_wdf_data_reg[69]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Ram/mem_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\mem_controller/delete_address_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Ram/mem_addr_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Ram/mem_addr_reg[26] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_1/clk_out1' to pin 'clk_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_1/clk_out2' to pin 'clk_1/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'Ram/Inst_DDR/ui_clk' to pin 'Ram/Inst_DDR/bbstub_ui_clk/O'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |mig_7series_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |clk_wiz_0     |     1|
+|2     |mig_7series_0 |     1|
+|3     |CARRY4        |    15|
+|4     |LUT1          |     4|
+|5     |LUT2          |    24|
+|6     |LUT3          |     6|
+|7     |LUT4          |     6|
+|8     |LUT5          |     8|
+|9     |LUT6          |    25|
+|10    |FDRE          |   137|
+|11    |FDSE          |    19|
+|12    |IBUF          |    19|
+|13    |OBUF          |    18|
+|14    |OBUFT         |    17|
++------+--------------+------+
+
+Report Instance Areas: 
++------+-----------------+---------+------+
+|      |Instance         |Module   |Cells |
++------+-----------------+---------+------+
+|1     |top              |         |   465|
+|2     |  Ram            |Ram2Ddr  |   234|
+|3     |  mem_controller |mem_ctrl |   142|
++------+-----------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 961.180 ; gain = 240.562
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 961.180 ; gain = 372.840
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 972.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 972.945 ; gain = 640.535
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 972.945 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/Nexys4-DDR-DDR-SAMPLE-master/DDR_/DDR_.runs/synth_1/looper1_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file looper1_1_utilization_synth.rpt -pb looper1_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 11 15:27:31 2021...
